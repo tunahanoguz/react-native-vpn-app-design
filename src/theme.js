@@ -1,4 +1,4 @@
-export const colors = {
+const colors = {
   blue: '#0094FC',
   green: '#5ED40A',
   disconnectedGrey: '#CECECE',
@@ -13,11 +13,23 @@ export const colors = {
   innerCircleGrey: 'rgba(255, 255, 255, 0.2)',
   selectedCircle: '#DEDEDE',
   unselectedCircle: '#249DF6',
+  borderDark: '#5B5B5B',
 };
 
-export const gradients = {
+const gradients = {
   lightBlueGradient: ['#2861FF', '#25B5FF'],
   darkBlueGradient: ['#0055FF', '#0094FB'],
   lightGreyGradient: ['#C2CDED', '#A2A3A4'],
   darkGreyGradient: ['#6E7383', '#505557'],
+};
+
+const fontSizes = [12, 13, 16, 18, 20];
+
+const space = [6, 8, 10, 12, 14, 20, 22, 24, 28, 30, 36, 40, 56, 68];
+
+export default {
+  colors,
+  gradients,
+  fontSizes,
+  space,
 };
