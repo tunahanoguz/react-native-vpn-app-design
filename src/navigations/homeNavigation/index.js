@@ -25,7 +25,7 @@ function HomeNavigation() {
         headerLeft: () => (
           <TouchableOpacity
             onPress={() => navigation.toggleDrawer()}
-            style={{ marginTop: 8, paddingHorizontal: 30 }}>
+            style={{ marginTop: 6, paddingHorizontal: 30 }}>
             <Image source={require('../../assets/icons/menu.png')} />
           </TouchableOpacity>
         ),
