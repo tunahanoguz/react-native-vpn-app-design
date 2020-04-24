@@ -7,7 +7,11 @@ function HomeNavigation() {
 
   return (
     <Stack.Navigator initialRouteName="Introduction">
-      <Stack.Screen name="Introduction" component={Introduction} />
+      <Stack.Screen
+        name="Introduction"
+        component={Introduction}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen name="Home" component={Home} />
     </Stack.Navigator>
   );
