@@ -23,9 +23,15 @@ function Home() {
           isShadow={true}
           bg="white">
           <Text medium color="textGrey">
-            {texts.connected}
+            {isConnected ? texts.connected : texts.disconnected}
           </Text>
-          <Box width={8} height={8} ml={0} bg="green" borderRadius={100} />
+          <Box
+            width={8}
+            height={8}
+            ml={0}
+            bg={isConnected ? 'green' : 'disconnectedGrey'}
+            borderRadius={100}
+          />
         </Button>
 
         <VPNButton isConnected={isConnected} setIsConnected={setIsConnected} />
@@ -36,7 +42,7 @@ function Home() {
           bg={isConnected ? 'transparent' : 'blue'}
           onPress={toggleVPN}>
           <Text variant="bold" uppercase color={!isConnected && 'white'}>
-            {texts.disconnect}
+            {isConnected ? texts.disconnect : texts.connect}
           </Text>
         </Button>
       </Box>
