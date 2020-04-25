@@ -10,32 +10,32 @@ export const countries = [
     name: 'New York, NY',
   },
   {
-    id: 1,
+    id: 3,
     icon: require('./assets/icons/united-kingdom.png'),
     name: 'London',
   },
   {
-    id: 1,
+    id: 4,
     icon: require('./assets/icons/russia.png'),
     name: 'Moscow',
   },
   {
-    id: 1,
+    id: 5,
     icon: require('./assets/icons/sweden.png'),
     name: 'Sweden',
   },
   {
-    id: 1,
+    id: 6,
     icon: require('./assets/icons/australia.png'),
     name: 'Melbourne',
   },
   {
-    id: 1,
+    id: 7,
     icon: require('./assets/icons/india.png'),
     name: 'New Delhi',
   },
   {
-    id: 1,
+    id: 8,
     icon: require('./assets/icons/singapore.png'),
     name: 'Singapore',
   },
