@@ -2,7 +2,7 @@ import * as React from 'react';
 import { TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Introduction, Home } from '../../screens';
+import { Introduction, Home, About } from '../../screens';
 
 function HomeNavigation() {
   const Stack = createStackNavigator();

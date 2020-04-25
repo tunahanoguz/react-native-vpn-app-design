@@ -20,7 +20,6 @@ function DrawerNavigation() {
         overlayColor: 0.1,
       }}>
       <Drawer.Screen name="Home" component={HomeNavigation} />
-      <Drawer.Screen name="About" component={About} />
     </Drawer.Navigator>
   );
 }

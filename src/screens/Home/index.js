@@ -1,14 +1,20 @@
 import * as React from 'react';
 import { Image } from 'react-native';
-import { Box, Button, VPNButton, Text } from '../../components';
+import { Box, Button, VPNButton, Text, ServerPicker } from '../../components';
 import { countries, texts } from '../../constants';
 import theme from '../../theme';
 
 function Home() {
   const [isConnected, setIsConnected] = React.useState(false);
+  const [isPickerOpen, setIsPickerOpen] = React.useState(false);
+  const [pickerButtonHeight, setPickerButtonHeight] = React.useState(0);
 
   function toggleVPN() {
     setIsConnected((value) => !value);
+  }
+
+  function togglePicker() {
+    setIsPickerOpen((value) => !value);
   }
 
   return (
@@ -49,20 +55,33 @@ function Home() {
 
       <Box
         flex={0.1}
-        flexDirection="row"
         justifyContent="center"
         alignItems="center"
         bg="light"
-        css={{
+        onLayout={(event) => {
+          const { height } = event.nativeEvent.layout;
+          setPickerButtonHeight(height);
+        }}
+        style={{
           shadowColor: theme.colors.shadow,
-          shadowOffset: { width: 0, height: 5 },
-          elevation: 100,
+          shadowRadius: 2,
+          shadowOffset: { width: 0, height: -4 },
+          elevation: 32,
         }}>
-        <Image source={require('../../assets/icons/united-states.png')} />
-        <Text fontSize={2} ml={5}>
-          {countries[1].name}
-        </Text>
+        <Button flexDirection="row" alignItems="center" onPress={togglePicker}>
+          <Image source={require('../../assets/icons/united-states.png')} />
+          <Text fontSize={2} ml={5} mr={3}>
+            {countries[1].name}
+          </Text>
+          <Image source={require('../../assets/icons/bottom.png')} />
+        </Button>
       </Box>
+
+      <ServerPicker
+        isOpen={isPickerOpen}
+        setIsOpen={togglePicker}
+        additionalHeight={pickerButtonHeight}
+      />
     </Box>
   );
 }
