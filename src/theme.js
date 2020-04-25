@@ -11,8 +11,8 @@ const colors = {
   shadow: 'rgba(0, 0, 0, 0.1)',
   middleCircleBlue: 'rgba(0, 0, 0, 0.3)',
   innerCircleGrey: 'rgba(255, 255, 255, 0.2)',
-  selectedCircle: '#DEDEDE',
-  unselectedCircle: '#249DF6',
+  selectedCircle: '#249DF6',
+  unselectedCircle: '#DEDEDE',
   borderDark: '#5B5B5B',
 };
 
